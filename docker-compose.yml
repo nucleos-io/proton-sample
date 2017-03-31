@@ -1,0 +1,12 @@
+app:
+  image: proton-sample
+  volumes:
+    - "./.tmp:/app/.tmp"
+    - "./api:/app/api"
+    - "./test:/app/test"
+    - "./config:/app/config"
+  ports:
+    - "8443:8443"
+  env_file: .env
+  links:
+    - mongo
