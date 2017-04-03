@@ -13,7 +13,7 @@ export default {
       // see: `https://github.com/nucleos-io/proton-quark-mongoose`
       // and `https://github.com/nucleos-io/proton-mongoose-model`
       connection: {
-        uri: process.env.MONGO_URI,
+        uri: process.env.MONGO_URI || 'mongodb:27017',
       },
       adapter: 'mongoose',
     },
